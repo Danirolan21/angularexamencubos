@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Tus compras</h1>
+    <hr class="border border-danger border-2 opacity-100">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Núm. Pedido</th>
+                <th>ID Cubo</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(compra of compras; track compra) {
+                <tr>
+                    <td>{{compra.idPedido}}</td>
+                    <td>{{compra.idCubo}}</td>
+                    <td>{{compra.fechaPedido}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row justify-content-around"> 
+        <a [routerLink]="['/perfil']" class="btn btn-primary w-25 mt-3">
+            Volver al perfil
+        </a>
+        <a [routerLink]="['/pedido']" class="btn btn-primary w-25 mt-3">
+            Realizar pedido
+        </a>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Realizar pedidos</h1>
+    <hr class="border border-danger border-2 opacity-100">
+    <form #comprarcubillo="ngForm">
+        <label class="form-label">Elige un cubo: </label>
+        <select class="form-select" name="selectcubos" #selectcubos>
+            @for(cubo of cubos; track cubo) {
+                <option value={{cubo.idCubo}}>
+                    {{cubo.nombre}}
+                </option>
+            }
+        </select>
+        <button class="btn btn-primary w-100 mt-3" (click)="comprarCubo()">
+            Comprar Cubo
+        </button>
+    </form>
+  </div>
